@@ -14,6 +14,8 @@ body{
     font-size: 14px;
     font-weight: 400;
     background-color:rgb(248, 210, 159) !important;
+    overflow-x: hidden;
+    color: #130D4C;
 }
 
 /* nav */
@@ -35,6 +37,18 @@ body{
 }
 .nav ul li {
     list-style: none;   
+    outline: none;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: #130D4C;
+}
+
+.nav ul li a:hover{
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+    transition: all 0.4s;
 }
 
 .logo{
@@ -56,12 +70,18 @@ body{
    font-size: 1.2em;
    font-family: 'Montserrat', sans-serif;
    font-weight: bold;
+   color: #130D4C;
 }
 .others{
     text-decoration: none;
-    font-size: 100%;
-    color: black;
+    color: #130D4C;
     font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width:1100px) and (min-width: 500px){
+    .nav{
+        height: 12vh;
+    }
 }
 
 @media (max-width: 500px)
@@ -109,11 +129,11 @@ body{
 .inner-div{
     display: flex;
     flex-direction: column;
-    background-color: rgb(177, 177, 177);
+    background-color: #fff;
     height: 100%;
     width: 40%;
-    color: #000;
-    box-shadow: 10px 0px 60px 65px rgb(177, 177, 177);
+    color: #130D4C;
+    box-shadow: 10px 0px 60px 65px #fff;
     padding: 25px;
 }
 
@@ -124,20 +144,18 @@ body{
     bottom: 0;
     left: 0;
     border: none;
-    border-top: 1px solid #000;
-    background-color: rgb(75, 152, 253);
+    background-color: #130D4C;
     font-size: 25px;
     letter-spacing: 2px;
 }
 .mov-btn a{
     text-decoration: none;
     font-family: "Montserrat", helvetica, arial, sans-serif;
-    color: #000;
+    color: #fff;
 }
 
 .mov-btn a:hover{
     text-decoration: none;
-    color: #fff;
 }
 
 .head{
@@ -183,20 +201,21 @@ body{
     transition: all 0.4s;
 }
 
-@media (max-width: 1100px) and (min-width: 900px){
-    .inner-div {
-        width: 60%;
+@media (max-width: 1100px) and (min-width: 660px){
+    .card-container{
+        position: relative;
+        height: 80vh;
     }
-    .movie-card{
-        width: 80%;
+    .explore{
+        position: absolute;
+        top: -32px;
+        left: 20px;
     }
-    .movie-card:hover{
-        transform: scale(1.09);
-        transition: all 0.4s;
+    .bePart{
+        position: absolute;
+        top: -32px;
+        right: 20px;
     }
-}
-
-@media (max-width: 900px){
     .blank{
         display: block;
         width: 100%;
@@ -206,7 +225,7 @@ body{
     .movie-card{
         display: flex;
         flex-direction: column;
-        width: 88vw;
+        width: 46vw;
         height: 70vh;
     }
     .inner-div{
@@ -227,16 +246,66 @@ body{
     }
 }
 
+@media (max-width:660px) and (min-width: 500px){
+    .card-container{
+        flex-direction: column;
+        height: 200vh;
+    }
+    .bePart{
+        margin: 0 0 40px 0;
+        width: 90%;
+        height: 100vh;
+    }
+    .explore{
+        margin: 0;
+        width: 90%;
+        height: 100vh;
+    }
+}
+
 @media (max-width: 500px){
     .card-container{
         flex-direction: column;
-        height: 100vh;
+        height: 120vh;
     }
     .movie-card{
         padding: 20px 10px;
         margin: 3vh 0px 3vh 0px;
     }
-    
+    .blank{
+        display: block;
+        width: 100%;
+        height: 40%;
+        background: none;
+    }
+    .inner-div{
+        height: 60%;
+        width: 100%;
+        padding: 0;
+    }
+    .right{
+        width: 100%;
+    }
+    .bePart{
+        width: 90%;
+        height: 60vh;
+        flex-direction: column;
+    }
+    .explore{
+        width: 90%;
+        height: 60vh;
+        flex-direction: column;
+    }
+
+    .right h1{
+        margin: 0;
+    }
+    .right h4{
+        margin: 0;
+    }
+    .right p{
+        margin: 0;
+    }
 }
 
 /* rathore slider*/
@@ -260,6 +329,25 @@ body{
 
   .slide{
       display: block;
+  }
+
+  @media (max-width:1000px) and (min-width:500px){
+    .slider{
+        height: 39vh;
+    }
+    .lef-siz{
+        background: none;
+        position: absolute !important;
+        top: 50% !important;
+        left: 0 !important;
+        transform: translateY(-50%);
+    }
+    .rig-siz{
+      position: absolute !important;
+      top: 50% !important;
+      right: 0 !important;
+      transform: translateY(-50%);
+    }
   }
 
   @media (max-width: 500px){
@@ -303,29 +391,49 @@ body{
 .rig-h{
     text-decoration: none;
     font-size: 0.8em;
-    color: black;
+    color: #130D4C;
     font-family: 'Montserrat', sans-serif;
 }
 .careers a, .policy a{
     text-decoration: none;
     font-size: 0.8em;
-    color: black;
+    color: #130D4C;
     font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+.careers a:hover{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.2s ease-in-out;
+}
+
+.policy a:hover{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.2s ease-in-out;
 }
 
 .icons a{
     text-decoration: none;
     font-size: 1.5em;
-    color: black;
+    color: #130D4C;
     font-family: 'Montserrat', sans-serif;
 }
-.name{
+
+.icons a:hover{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.2s ease-in-out;
+}
+
+.f-name{
     
     letter-spacing: 2px;
     font-size: 1em;  
 }
-.name:hover{
-    color: black;
+.f-name:hover{
+    color: black
 }
 .rights{
     line-height: 150% ;
@@ -347,7 +455,8 @@ body{
     padding: 5px 10px;
     height: 30px;
     border: none;
-    background-color: rgb(75,172,253);
+    color: #fff;
+    background-color: #130D4C;
     border-top-right-radius: 5px;
     margin-left: -5%;
     border-bottom-right-radius: 5px;
@@ -355,7 +464,18 @@ body{
     text-transform: uppercase;
     font-size: 0.8em;
 }
-@media (max-width:500px){
+
+@media (max-width:1100px) and (min-width:760px){
+    .input{
+        width: 30vw;
+    }
+    .inputt{
+        padding: 5px 8px;
+        letter-spacing: normal;
+    }
+}
+
+@media (max-width:760px){
     .footer{
         display: flex;
         flex-direction:column;
@@ -389,7 +509,7 @@ body{
         padding: 3px 5px;
         letter-spacing: 0rem;
     }
-    .name{
+    .f-name{
         padding-left: 5px;
     }
 }
