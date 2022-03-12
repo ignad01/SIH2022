@@ -1,12 +1,16 @@
 .teamPage{
-    height: 76vh;
+    /* height: 76vh; */
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 .teamWeb  {
     display: flex;
     flex-direction:row;
     width:100vw;
+    height: 50%;
+    padding: 50px 10px;
     justify-content: space-evenly;
    letter-spacing: 1px;
    text-transform: uppercase;
@@ -19,6 +23,7 @@
     flex-direction:row;
     width:100vw;
     height: 50%;
+    padding: 50px 10px;
     justify-content: space-evenly;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -59,12 +64,12 @@
 
 @media (max-width:1000px) and (min-width:760px){
   .team{
-      height: 15vh;
-      width: 30vw;
+      width: 200px;
+      height: 150px;
   }
   .teamimg{
-      height: 8vh;
-      top: -20%;
+      height: 100px;
+      top: -40px;
   }.team h3{
     margin-top: 100px;
     margin-bottom: 5px;
@@ -73,19 +78,18 @@
 }
 
 @media (max-width:760px){
-    .teamPage{
-        height: 200vh;
-    }
     .teamWeb{
-        height: 100vh;
         flex-direction: column;
+        padding-top: 20px;
     }
     .teamContent{
-        height: 100vh;
         flex-direction: column;
+        padding-top: 90px;
     }
     .team{
-        width: 80vw;
+        width: 200px;
+        height: 200px;
+        margin-top: 60px;
     }
     .teamimg{
         width: 130px;
