@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<html>
+
+<head>
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="login_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="body">
+  <!-- nav link -->
+  <div class="nav">
+    <div class="logo">
+      <div id="img">
+        <img src="./img/logo/logo.png">
+      </div>
+      <h3 class="name">CULT-कृ</h3>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="index.html" class="others">Home</a></li>
+      <li><a href="service.html" class="others">Service</a></li>
+      <li><a href="team_index.html" class="others">Team</a></li>
+      <li><a href="login.html" class="others">SignUp/SignIn</a></li>
+    </ul>
+  </div>
+
+  <!-- log in form -->
+  <div class="login-page">
+    <div class="form">
+
+      <form>
+        <lottie-player
+          src="https://assets4.lottiefiles.com/datafiles/XRVoUu3IX4sGWtiC3MPpFnJvZNq7lVWDCa8LSqgS/profile.json"
+          background="transparent" speed="1" style="justify-content: center;" loop autoplay></lottie-player>
+        <input type="text" placeholder="&#xf007;  username" />
+        <input type="password" id="password" placeholder="&#xf023;  password" />
+        <i class="fas fa-eye" onclick="show()"></i>
+        <br>
+        <br>
+        <button>LOGIN</button>
+        <p class="message"></p>
+      </form>
+
+      <form class="login-form">
+        <button type="button" onclick="window.location.href='signup.html'">SIGN UP</button>
+      </form>
+
+
+      <div class="container">
+        <hr class="hr-text" data-content="OR">
+
+      </div>
+      <a href="https://www.google.com/">
+        <div class="google">
+          <div> <img src="./img/login/google.png" alt="" class="googleImage"></div>
+          <div class="googleText">Google</div>
+
+        </div>
+      </a>
+    </div>
+  </div>
+
+  
+      <script>
+        function show() {
+          var password = document.getElementById("password");
+          var icon = document.querySelector(".fas")
+
+          // ========== Checking type of password ===========
+          if (password.type === "password") {
+            password.type = "text";
+          }
+          else {
+            password.type = "password";
+          }
+        };
+      </script>
+</body>
+
+</html>
