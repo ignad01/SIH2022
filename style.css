@@ -27,6 +27,9 @@ body{
     justify-content: space-around;
     background-color:rgb(235, 187, 124);
     padding: 20px 20px;   
+    /* background-image: url("./img/desert.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .nav ul{
@@ -518,5 +521,97 @@ body{
     }
     .f-name{
         padding-left: 5px;
+    }
+}
+
+
+
+/* About us */
+.about{
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    max-width: 800px;
+    color: #130D4C;
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-weight: 16px;
+}
+.about h1{
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+}
+.about ul li{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+@media (max-width:500px){
+    .about{
+        width: 90vw;
+    }
+    .about h1{
+        font-size: medium;
+        font-weight: 700;
+    }
+    .about ul li{
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+
+/* serarch bar */
+.src-bar-container{
+    width: 80vw;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    justify-content: center;
+}
+.ser-flex{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+.ser-flex input{
+    border: 1px solid #dedede;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    font-size: 14px;
+    padding: 8px 10px;
+    margin: 20px 0;
+}
+
+.ser-flex button{
+    border: 1px solid #dedede;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 14px;
+    padding: 8px 10px;
+    margin: 20px 0;
+    width: 50px;
+}
+
+.ser-flex input[type="text"]{
+    width: 100%;
+    outline: none;
+}
+
+.ser-btn{
+    cursor: pointer;
+    border-radius: 0;
+    border-left: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+@media (max-width:500px){
+    .src-bar-container{
+        width: 100vw;
     }
 }

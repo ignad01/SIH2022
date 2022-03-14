@@ -1,0 +1,119 @@
+.ser-contain{
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    padding: 20px 0;
+    align-items: center;
+}
+
+.ser-contain h1{
+    margin: 10px 0px 20px 0px;
+}
+
+.ser-main{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.ser-left{
+    width: 40%;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ser-right{
+    width: 50%;
+    padding: 20px 40px;
+}
+
+.ser-tradition{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: 5px dashed #134D4c;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.ser-tradition p{
+    text-align: center;
+}
+
+.ser-tradition p{
+    padding: 0 5px;
+}
+.ser-about{
+    width: 90%;
+    margin: 10px 0px;
+}
+
+.ser-about ul{
+    display: flex;
+    width: 90%;
+    height: 40px;
+    list-style-type: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ser-about ul li{
+    margin: 0 5px;
+}
+
+.ser-about ul li a{
+    text-decoration: none;
+    color: #130D4c;
+    cursor: pointer;
+}
+
+@media (max-width:600px) and (min-width:370px){
+    .ser-main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .ser-right{
+        width: 100%;
+    }
+    .ser-left{
+        width: 100%;
+        text-align: center;
+    }
+    .ser-about ul{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 370px){
+    .ser-contain h1{
+        font-size: 1.05em;
+    }
+    .ser-main{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .ser-right{
+        width: 100%;
+    }
+    .ser-left img{
+        width: 200px;
+        height: 139px;
+    }
+    .ser-left{
+        width: 100%;
+        text-align: center;
+    }
+    .ser-about ul{
+        flex-wrap: wrap;
+    }
+}
+
+    
